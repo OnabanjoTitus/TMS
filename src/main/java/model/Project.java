@@ -1,12 +1,20 @@
 package model;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.annotation.Id;
+
 import java.time.LocalDate;
 import java.util.Objects;
-
+@EntityScan
 public class Project {
+    @Id
     private Long id;
     private String name;
     private LocalDate dateCreated;
+
+    public Project() {
+    }
+
     public Project(Project project){
        this(project.getId(), project.getName(),project.getDateCreated());
     }

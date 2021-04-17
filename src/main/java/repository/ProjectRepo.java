@@ -1,10 +1,12 @@
 package repository;
 
+import com.mongodb.client.MongoDatabase;
 import model.Project;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
-
-public interface ProjectRepo {
-    Optional<Project> findById(Long id);
-    Project save(Project project);
+@Repository
+public interface ProjectRepo extends CrudRepository<Project,Long> {
+Optional<Project> findByName(String name);
 }
