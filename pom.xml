@@ -14,12 +14,16 @@
     <name>task-management-application</name>
     <description>task management app with springboot</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>11</java.version >
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

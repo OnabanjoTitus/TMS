@@ -24,6 +24,11 @@ public class Project {
         this.dateCreated = dateCreated;
     }
 
+    public Project(String testname, LocalDate now) {
+    this.name=testname;
+    this.dateCreated= now;
+    }
+
     public Long getId() {
         return id;
     }

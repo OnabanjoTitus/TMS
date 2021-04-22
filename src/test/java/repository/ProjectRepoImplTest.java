@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringJUnitConfig
 class ProjectRepoImplTest {
     private final ProjectRepo projectRepo;
-    @Autowired
+
     public ProjectRepoImplTest(ProjectRepo projectRepo) {
         this.projectRepo = projectRepo;
     }
