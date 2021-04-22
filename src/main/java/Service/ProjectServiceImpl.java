@@ -2,15 +2,17 @@ package Service;
 
 import model.Project;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import repository.ProjectRepo;
 
 import java.util.Optional;
 
-@Service
+@Component
 public class ProjectServiceImpl implements ProjectService{
 
     private final ProjectRepo projectRepo;
+
     @Autowired
     public ProjectServiceImpl(ProjectRepo projectRepo) {
         this.projectRepo = projectRepo;
@@ -30,8 +32,8 @@ public class ProjectServiceImpl implements ProjectService{
     }
 
     @Override
-    public Project save(Project project) {
+    public void save(Project project) {
 //        LOG.debug("Project Service >> Saving Project {}",project);
-        return projectRepo.save(project);
+        projectRepo.save(project);
     }
 }
