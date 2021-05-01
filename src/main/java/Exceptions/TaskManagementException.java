@@ -1,7 +1,9 @@
 package Exceptions;
 
-import java.security.PrivilegedActionException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 
+import java.security.PrivilegedActionException;
+@ControllerAdvice
 public class TaskManagementException extends Exception {
     /**
      * Constructs a new exception with {@code null} as its detail message.

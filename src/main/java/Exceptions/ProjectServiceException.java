@@ -1,5 +1,8 @@
 package Exceptions;
 
+import org.springframework.web.bind.annotation.ControllerAdvice;
+
+@ControllerAdvice
 public class ProjectServiceException extends TaskManagementException {
     /**
      * Constructs a new exception with {@code null} as its detail message.
@@ -45,7 +48,7 @@ public class ProjectServiceException extends TaskManagementException {
      * typically contains the class and detail message of {@code cause}).
      * This constructor is useful for exceptions that are little more than
      * wrappers for other throwables (for example, {@link
-     * PrivilegedActionException}).
+
      *
      * @param cause the cause (which is saved for later retrieval by the
      *              {@link #getCause()} method).  (A {@code null} value is

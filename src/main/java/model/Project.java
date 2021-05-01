@@ -2,6 +2,7 @@ package model;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
+import org.springframework.lang.NonNull;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -9,6 +10,7 @@ import java.util.Objects;
 public class Project {
     @Id
     private Long id;
+    @NonNull
     private String name;
     private LocalDate dateCreated;
 

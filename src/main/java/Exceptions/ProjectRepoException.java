@@ -1,5 +1,8 @@
 package Exceptions;
 
+import org.springframework.web.bind.annotation.ControllerAdvice;
+
+@ControllerAdvice
 public class ProjectRepoException extends TaskManagementException{
     /**
      * Constructs a new exception with {@code null} as its detail message.
