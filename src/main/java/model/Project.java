@@ -1,5 +1,6 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
 import org.springframework.lang.NonNull;
@@ -20,7 +21,7 @@ public class Project {
     public Project(Project project){
        this(project.getId(), project.getName(),project.getDateCreated());
     }
-    public Project(Long id, String name, LocalDate dateCreated) {
+    public Project(@JsonProperty("Id") Long id, @JsonProperty("name") String name,@JsonProperty("date") LocalDate dateCreated) {
         this.id = id;
         this.name = name;
         this.dateCreated = dateCreated;

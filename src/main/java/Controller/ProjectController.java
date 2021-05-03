@@ -3,18 +3,20 @@ package Controller;
 
 import Service.ProjectService;
 import model.Project;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.time.LocalDate;
+
 @RequestMapping(value = "/projects")
 @RestController
 public class ProjectController {
-    private ProjectService projectService;
+    private final ProjectService projectService;
 
+    @Autowired
     public ProjectController(ProjectService projectService) {
         this.projectService = projectService;
     }
